@@ -1,9 +1,9 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ChevronDown, User, Download } from 'lucide-react';
+import { Phone, Mail, MapPin, ChevronDown, User, Download, Linkedin } from 'lucide-react';
 
 const Hero = ({ scrollToSection }) => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 via-purple-200 to-indigo-300 pt-20">
       <div className="container mx-auto px-6 text-center">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mx-auto mb-8 flex items-center justify-center shadow-2xl">
@@ -13,7 +13,7 @@ const Hero = ({ scrollToSection }) => {
             Prince Emma Ejikeme
           </h1>
           <p className="text-2xl md:text-3xl text-gray-600 mb-8">
-            Frontend / JavaScript Developer
+            Frontend/Javascript Developer
           </p>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Passionate about crafting exceptional user experiences with modern JavaScript, React, and responsive design. 
@@ -21,15 +21,21 @@ const Hero = ({ scrollToSection }) => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg">
+            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <Phone className="w-5 h-5 text-blue-600" />
               <span className="font-medium">+(234)9168381896</span>
             </div>
-            <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg">
+            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <Mail className="w-5 h-5 text-blue-600" />
               <span className="font-medium">israelprince272@gmail.com</span>
             </div>
-            <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg">
+            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
+              <Linkedin className="w-5 h-5 text-blue-600" />
+              <a href="https://www.linkedin.com/in/princycodes" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-blue-600 transition-colors">
+                LinkedIn Profile
+              </a>
+            </div>
+            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <MapPin className="w-5 h-5 text-blue-600" />
               <span className="font-medium">Nigeria</span>
             </div>

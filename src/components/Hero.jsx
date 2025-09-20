@@ -13,7 +13,7 @@ const Hero = ({ scrollToSection }) => {
             Prince Emma Ejikeme
           </h1>
           <p className="text-2xl md:text-3xl text-gray-600 mb-8">
-            Frontend Developer & JavaScript Specialist
+            Frontend / JavaScript Developer
           </p>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Passionate about crafting exceptional user experiences with modern JavaScript, React, and responsive design. 

@@ -2,6 +2,16 @@ import React from 'react';
 import { Phone, Mail, MapPin, ChevronDown, User, Download, Linkedin } from 'lucide-react';
 
 const Hero = ({ scrollToSection }) => {
+
+  // ADD THIS DOWNLOAD FUNCTION HERE (after the component starts, before the return)
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Prince_Emma_Ejikeme_CV.pdf';
+    link.download = 'Prince_Emma_Ejikeme_Frontend_Developer_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 via-purple-200 to-indigo-300 pt-20">
       <div className="container mx-auto px-6 text-center">
@@ -23,11 +33,16 @@ const Hero = ({ scrollToSection }) => {
           <div className="flex flex-wrap justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <Phone className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">+(234)9168381896</span>
+              <a href="tel:+2349168381896" className="font-medium hover:text-blue-600 transition-colors">
+                +(234)9168381896
+              </a>
             </div>
             <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <Mail className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">israelprince272@gmail.com</span>
+              <a href="mailto:israelprince272@gmail.com?subject=Hello Prince - Job Opportunity&body=Hi Prince,%0D%0A%0D%0AI came across your portfolio and would like to discuss a potential opportunity.%0D%0A%0D%0ABest regards," 
+                className="font-medium hover:text-blue-600 transition-colors">
+                  israelprince272@gmail.com
+              </a>
             </div>
             <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <Linkedin className="w-5 h-5 text-blue-600" />
@@ -37,7 +52,12 @@ const Hero = ({ scrollToSection }) => {
             </div>
             <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <MapPin className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">Nigeria</span>
+              <a href="https://www.google.com/maps/place/Owerri,+Nigeria/@5.4840395,6.9753692,12z/data=!3m1!4b1!4m6!3m5!1s0x10426c4eda854b47:0x4e5ddaac7d0a8b7e!8m2!3d5.4840395!4d7.0335199!16zL20vMDN3eHI4" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="font-medium hover:text-blue-600 transition-colors">
+                Owerri, Nigeria
+              </a>
             </div>
           </div>
 
@@ -48,7 +68,10 @@ const Hero = ({ scrollToSection }) => {
             >
               View My Work
             </button>
-            <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300">
+            {/* THIS BUTTON NOW USES THE DOWNLOAD FUNCTION */}
+            <button 
+              onClick={downloadCV}
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300">
               <Download className="w-5 h-5 inline mr-2" />
               Download CV
             </button>

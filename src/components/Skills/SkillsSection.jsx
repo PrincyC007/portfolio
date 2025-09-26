@@ -16,13 +16,13 @@ const SkillsSection = () => {
             icon={Code}
             title="Frontend Technologies"
             skills={['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3']}
-            level={5}
+            level={4}
           />
           <SkillCard
             icon={Zap}
             title="Frameworks & Libraries"
-            skills={['React', 'Next.js', 'Vue.js', 'Node.js']}
-            level={4}
+            skills={['React', 'Django', 'Vue.js', 'Node.js']}
+            level={3}
           />
           <SkillCard
             icon={Palette}
@@ -36,7 +36,7 @@ const SkillsSection = () => {
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Development Tools</h3>
             <div className="grid grid-cols-2 gap-4">
-              {['Git/GitHub', 'VS Code', 'Webpack', 'NPM/Yarn', 'Chrome DevTools', 'Figma'].map((tool, index) => (
+              {['Git/GitHub', 'VS Code', 'Webpack', 'NPM', 'Chrome DevTools', 'Figma'].map((tool, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span className="text-gray-700">{tool}</span>

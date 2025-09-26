@@ -7,7 +7,7 @@ import ProjectsSection from './components/Projects/ProjectsSection';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
 
@@ -26,6 +26,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   );
 }

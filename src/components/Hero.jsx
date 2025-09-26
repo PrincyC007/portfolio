@@ -1,9 +1,8 @@
-import React from 'react';
-import { Phone, Mail, MapPin, ChevronDown, User, Download, Linkedin } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, ChevronDown, ChevronUp, User, Download, Linkedin } from 'lucide-react';
 
 const Hero = ({ scrollToSection }) => {
-
-  // ADD THIS DOWNLOAD FUNCTION HERE (after the component starts, before the return)
+  // Download CV function
   const downloadCV = () => {
     const link = document.createElement('a');
     link.href = '/Prince_Emma_Ejikeme_CV.pdf';
@@ -12,6 +11,33 @@ const Hero = ({ scrollToSection }) => {
     link.click();
     document.body.removeChild(link);
   };
+
+  // Scroll state for scroll-to-top button and down arrow
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showDownArrow, setShowDownArrow] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      // Show scroll-to-top button after 100vh
+      setShowScrollTop(scrollY > windowHeight);
+
+      // Hide down arrow if within last 100vh of page
+      const scrolledToBottom = scrollY + windowHeight >= docHeight - windowHeight;
+      setShowDownArrow(!scrolledToBottom);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 via-purple-200 to-indigo-300 pt-20">
       <div className="container mx-auto px-6 text-center">
@@ -40,7 +66,7 @@ const Hero = ({ scrollToSection }) => {
             <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-white/40">
               <Mail className="w-5 h-5 text-blue-600" />
               <a href="mailto:israelprince272@gmail.com?subject=Hello Prince - Job Opportunity&body=Hi Prince,%0D%0A%0D%0AI came across your portfolio and would like to discuss a potential opportunity.%0D%0A%0D%0ABest regards," 
-                className="font-medium hover:text-blue-600 transition-colors">
+                className="font-medium hover:text-blue-600 transition-colors break-all">
                   israelprince272@gmail.com
               </a>
             </div>
@@ -78,9 +104,23 @@ const Hero = ({ scrollToSection }) => {
           </div>
         </div>
 
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce pointer-events-none">
-          <ChevronDown className="w-8 h-8 text-gray-400" />
-        </div>
+        {/* Downward Arrow */}
+        {showDownArrow && (
+          <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce pointer-events-none z-20">
+            <ChevronDown className="w-8 h-8 text-gray-400" />
+          </div>
+        )}
+
+        {/* Scroll to Top Button */}
+        {showScrollTop && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg z-30 animate-in fade-in"
+            aria-label="Scroll to top"
+          >
+            <ChevronUp className="w-6 h-6" />
+          </button>
+        )}
       </div>
     </section>
   );

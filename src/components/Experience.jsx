@@ -13,7 +13,7 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           {/* Experience */}
           <div className="bg-white rounded-2xl p-4 sm:p-3 md:p-8 shadow-lg mb-8">
-            <div className="flex items-start gap-6">
+            <div className="flex items-start gap-4">
               <div className="p-4 bg-blue-100 rounded-full">
                 <Briefcase className="w-8 h-8 text-blue-600" />
               </div>
@@ -50,7 +50,7 @@ const Experience = () => {
 
           {/* Education */}
           <div className="bg-white rounded-2xl p-4 sm:p-3 md:p-8 shadow-lg">
-            <div className="flex items-start gap-6">
+            <div className="flex items-start gap-4">
               <div className="p-4 bg-purple-100 rounded-full">
                 <GraduationCap className="w-8 h-8 text-purple-600" />
               </div>

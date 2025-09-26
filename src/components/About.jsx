@@ -2,8 +2,8 @@ import React from 'react';
 
 const About = () => {
   const stats = [
-    { number: '5+', label: 'Projects Completed', gradient: 'from-blue-50 to-purple-50', color: 'text-blue-600' },
-    { number: '2+', label: 'Years Experience', gradient: 'from-green-50 to-blue-50', color: 'text-green-600' },
+    { number: '2+', label: 'Projects Completed', gradient: 'from-blue-50 to-purple-50', color: 'text-blue-600' },
+    { number: '1+', label: 'Years Experience', gradient: 'from-green-50 to-blue-50', color: 'text-green-600' },
     { number: '100%', label: 'Client Satisfaction', gradient: 'from-purple-50 to-pink-50', color: 'text-purple-600' },
     { number: '24/7', label: 'Dedicated Support', gradient: 'from-yellow-50 to-orange-50', color: 'text-orange-600' }
   ];
@@ -18,17 +18,17 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
               I'm a passionate frontend developer who loves turning complex problems into simple, beautiful solutions. 
               With a strong foundation in modern JavaScript, React, and responsive design, I create web applications 
               that provide exceptional user experiences across all devices.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
               My approach combines technical expertise with creative problem-solving. I believe in writing clean, 
               maintainable code that not only works flawlessly but also scales effectively. Every project I work on 
               is an opportunity to learn something new and push the boundaries of what's possible on the web.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
               When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
               or helping others learn to code. I'm always excited to collaborate on challenging projects and 
               contribute to innovative teams.

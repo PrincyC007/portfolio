@@ -61,7 +61,7 @@ const Hero = ({ scrollToSection }) => {
             </div>
           </div>
 
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
             <button 
               onClick={() => scrollToSection('projects')}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
@@ -78,7 +78,7 @@ const Hero = ({ scrollToSection }) => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce pointer-events-none">
           <ChevronDown className="w-8 h-8 text-gray-400" />
         </div>
       </div>

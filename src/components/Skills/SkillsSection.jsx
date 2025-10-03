@@ -21,7 +21,7 @@ const SkillsSection = () => {
           <SkillCard
             icon={Zap}
             title="Frameworks & Libraries"
-            skills={['React', 'Django', 'Vue.js', 'Node.js']}
+            skills={['React', 'Django', 'Node.js']}
             level={3}
           />
           <SkillCard

@@ -15,7 +15,7 @@ const SkillsSection = () => {
           <SkillCard
             icon={Code}
             title="Frontend Technologies"
-            skills={['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3']}
+            skills={['JavaScript (ES6+)', 'HTML5', 'CSS3']}
             level={4}
           />
           <SkillCard

@@ -5,7 +5,7 @@ const Contact = () => {
   // Function to download CV
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/Prince_Emma_Ejikeme_CV.pdf';
+    link.href = '/Prince_Emma_Ejikeme_CVN.pdf';
     link.download = 'Prince_Emma_Ejikeme_Frontend_Developer_CV.pdf';
     document.body.appendChild(link);
     link.click();

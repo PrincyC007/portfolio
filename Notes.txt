@@ -1,0 +1,3 @@
+6th October:
+I have to make the buttons used to link the page to my other github profiles doesnt work as same,
+they should be seperate.

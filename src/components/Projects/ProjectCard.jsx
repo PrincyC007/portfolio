@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, Github, Star } from 'lucide-react';
+import { Eye, Star } from 'lucide-react';
 
 const ProjectCard = ({ title, description, technologies, features, demoLink, codeLink, gradient }) => {
   return (

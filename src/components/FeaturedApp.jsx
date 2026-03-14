@@ -4,14 +4,10 @@ import { Smartphone, Download, Star, Code, Users, Zap } from 'lucide-react';
 
 const FeaturedApp = () => {
   // Function to download Android APK
-  const downloadAndroidApp = () => {
-    const link = document.createElement('a');
-    link.href = '/apps/base.apk'; // Your APK file in public/apps folder
-    link.download = 'Afromart_App.apk';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+    const downloadAndroidApp = () => {
+    const fileId = '1bS595yLNVyEiaNFozZ0DgWUTPIiELE6S';
+    window.open(`https://drive.google.com/uc?export=download&id=${fileId}`, '_blank');
+    };
 
   // Function to download iOS app (if available)
   const downloadIOSApp = () => {

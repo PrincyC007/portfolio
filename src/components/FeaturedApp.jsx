@@ -10,28 +10,28 @@ const FeaturedApp = () => {
     };
 
   // Function to download iOS app (if available)
-  const downloadIOSApp = () => {
-    // Option 1: Direct IPA download (for TestFlight or enterprise)
-    const link = document.createElement('a');
-    link.href = '/apps/afromart-app.ipa';
-    link.download = 'Afromart_App.ipa';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+//   const downloadIOSApp = () => {
+//     // Option 1: Direct IPA download (for TestFlight or enterprise)
+//     const link = document.createElement('a');
+//     link.href = '/apps/afromart-app.ipa';
+//     link.download = 'Afromart_App.ipa';
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
     
-    // Option 2: Redirect to App Store
-    // window.open('https://apps.apple.com/app/your-app-id', '_blank');
-  };
+//     // Option 2: Redirect to App Store
+//     // window.open('https://apps.apple.com/app/your-app-id', '_blank');
+//   };
 
   // Function to open Google Play Store (if published)
-  const openPlayStore = () => {
-    window.open('https://play.google.com/store/apps/details?id=com.afromart.app', '_blank');
-  };
+//   const openPlayStore = () => {
+//     window.open('https://play.google.com/store/apps/details?id=com.afromart.app', '_blank');
+//   };
 
   // Function to open Apple App Store (if published)
-  const openAppStore = () => {
-    window.open('https://apps.apple.com/app/afromart/id123456789', '_blank');
-  };
+//   const openAppStore = () => {
+//     window.open('https://apps.apple.com/app/afromart/id123456789', '_blank');
+//   };
 
   return (
     <section id="featured-app" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-black dark:via-purple-950 dark:to-black text-white relative overflow-hidden">

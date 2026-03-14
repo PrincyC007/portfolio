@@ -32,10 +32,10 @@ const ProjectCard = ({ title, description, technologies, features, demoLink, cod
         </div>
 
         <div className="flex gap-4 mt-auto">
-          <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+          {/* <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
             <Eye className="w-4 h-4" />
             Live Demo
-          </button>
+          </button> */}
           <a
             href="https://github.com/PrincyC007/portfolio"
             target="_blank"

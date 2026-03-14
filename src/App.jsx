@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import SkillsSection from './components/Skills/SkillsSection';
+import FeaturedApp from './components/FeaturedApp';
 import ProjectsSection from './components/Projects/ProjectsSection';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
@@ -22,6 +23,7 @@ function App() {
       <Hero scrollToSection={scrollToSection} />
       <About />
       <SkillsSection />
+      <FeaturedApp />   
       <ProjectsSection />
       <Experience />
       <Contact />
